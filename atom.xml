@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-31T02:04:44.841Z</updated>
+  <updated>2021-10-31T03:29:47.691Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于hexo+github部署博客网站后，网站打开404问题个人总结</title>
+    <link href="http://example.com/2021/10/31/%E5%85%B3%E4%BA%8Ehexo-github%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%90%8E%EF%BC%8C%E7%BD%91%E7%AB%99%E6%89%93%E5%BC%80404%E9%97%AE%E9%A2%98%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/"/>
+    <id>http://example.com/2021/10/31/%E5%85%B3%E4%BA%8Ehexo-github%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%90%8E%EF%BC%8C%E7%BD%91%E7%AB%99%E6%89%93%E5%BC%80404%E9%97%AE%E9%A2%98%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/</id>
+    <published>2021-10-31T03:15:32.000Z</published>
+    <updated>2021-10-31T03:29:47.691Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;很多人都遇到了相同的问题，为什么hexo本地预览没有问题，但是push到github上，打开显示404呢？本文会引用相关解决方案博客和讲述本人遇到的情况和解决方案。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="网站" scheme="http://example.com/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
   
   <entry>
     <title>关于建成独立博客的一天</title>

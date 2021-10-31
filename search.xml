@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>关于hexo+github部署博客网站后，网站打开404问题个人总结</title>
+    <url>/2021/10/31/%E5%85%B3%E4%BA%8Ehexo-github%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%90%8E%EF%BC%8C%E7%BD%91%E7%AB%99%E6%89%93%E5%BC%80404%E9%97%AE%E9%A2%98%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>很多人都遇到了相同的问题，为什么hexo本地预览没有问题，但是push到github上，打开显示404呢？本文会引用相关解决方案博客和讲述本人遇到的情况和解决方案。</p>
+<span id="more"></span>
+
+<h2 id="可供参考的博客"><a href="#可供参考的博客" class="headerlink" title="可供参考的博客"></a>可供参考的博客</h2><ul>
+<li><a href="https://www.jianshu.com/p/2349c763cc02">HEXO更新博客后出现404</a></li>
+<li><a href="https://blog.51cto.com/u_15344989/3654135">【亲测解决】hexo搭建Github博客上传后，访问网页显示404问题解决方案</a></li>
+</ul>
+<h2 id="本人遇到的情况"><a href="#本人遇到的情况" class="headerlink" title="本人遇到的情况"></a>本人遇到的情况</h2><p>很多博主都说了如何在github上建立一个repositories，然后名称一定要是’用户名+github.oi’，然后我开始怀疑自己用户名的大小写会不会影响用户名匹配（实际好像不会，看到了许多博主也是大小写用户名）。</p>
+<p>比较关键的一点，很多文章中没有阐述，<strong>这个项目需要设置为public</strong>。</p>
+<p>若一开始您和我一样设置为private的同学，将项目转为public的操作方法如下：</p>
+<ul>
+<li><p>可以打开项目，点击<strong>Settings</strong></p>
+</li>
+<li><p>点击Options</p>
+</li>
+<li><p>下拉到底</p>
+</li>
+<li><p>查看到Danger Zone中的Change repository visibility</p>
+</li>
+<li><p><strong>点击Change visibility</strong>。</p>
+</li>
+<li><p><strong>从项目private变为public</strong>。</p>
+</li>
+</ul>
+<p>当你的项目为public的时候，你就可以访问Settings中Pages（private需要付费）。</p>
+<p>Source里需要您选择部署的分支，请选择master，folder为/(root)即可。</p>
+<p>如果部署成功，Pages会显示您现在的网站访问的地址。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>技术</tag>
+        <tag>网站</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于建成独立博客的一天</title>
     <url>/2021/10/31/hello-world/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>一直想拥有一个属于自己的博客网站，在11月开始前的一天动工。记录一下今天的学习过程</p>
