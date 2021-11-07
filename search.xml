@@ -1,6 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>读书笔记 -《HTTP5权威指南》（一）</title>
+    <url>/2021/11/07/%E3%80%8AHTTP5%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%8B-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>本文为读书笔记系列之一——《HTTP5权威指南》第一章<br>之前在up主蜡笔与小勋那里了解到一些快速阅读的方法：<br>将文章中你觉得有用的文字或段落记录下来，然后写你的读书感受，这样才能更快更好地读好一本书，把一本厚厚的资料读薄。以后看看自己记录的笔记，很快就能回忆起其他的内容（联想记忆）。希望我坚持下来吧，ヾ(◍°∇°◍)ﾉﾞ</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="本章节感想"><a href="#本章节感想" class="headerlink" title="本章节感想"></a>本章节感想</h1><p>本来想把感受放到最后，发现，这才是我读书最重要的东西，应该提到最前面呀。</p>
+<p>阅读完本章以后，发现Web的诞生源于科技，不过市场一直推动着Web和技术前进。微软与网景的市场之战我觉得还是挺有趣的，因为原文也是简单描写，不过现代和历史都是会有重映的。</p>
+<p>Web技术已经逐渐密不可分了，现在的Web技术也是百花齐放，比如一些新的流行框架的到来，提供了很多便于开发者的方法和规范。</p>
+<p>喝水不忘挖井人，也许我们也应该慢慢去回味过去的World Wide Web的故事，和掌握一些最基本的知识点，这可能在繁华的开发环境下，读这本书的意义。</p>
+<h1 id="HTML5背景知识"><a href="#HTML5背景知识" class="headerlink" title="HTML5背景知识"></a>HTML5背景知识</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><ul>
+<li><p>HTML(Hypertext Markup Language，超文本标记语言)。</p>
+</li>
+<li><p>刚诞生HTML和万维网的时候，我们还不厌其烦地把“World Wide Web”（万维网）全写出来，远没有今天受人瞩目，不能只简称为“Web”。</p>
+</li>
+<li><p>技术世界已经分为Web诞生前和诞生后两个时代了。</p>
+</li>
+<li><p>在此过程中，HTML有过扩充，有过增强，有过扭曲，有过煎熬，见过争斗，见过官司，受过忽视，受过追捧，曾被变为雕虫小技，也曾被誉为未来之星。</p>
+</li>
+<li><p>本书讲述的是HTML5。这是HTML标准的最新版本，意在为这项重要技术带来秩序、条理和改进。曾经的青涩少年终于成熟了。</p>
+</li>
+</ul>
+<h2 id="1-1-HTML的历史"><a href="#1-1-HTML的历史" class="headerlink" title="1.1 HTML的历史"></a>1.1 HTML的历史</h2><h3 id="1-1-1-JavaScript的出场"><a href="#1-1-1-JavaScript的出场" class="headerlink" title="1.1.1 JavaScript的出场"></a>1.1.1 JavaScript的出场</h3><ul>
+<li><p>和Java程序设计语言基本没有什么关系。</p>
+</li>
+<li><p>出自一家名为网景的公司。</p>
+</li>
+<li><p>它的出现标志着内嵌在Web浏览器中的客户端脚本程序控制功能的发端。</p>
+</li>
+<li><p>HTML5规定假定可以使用JavaScript，而且要想使用HTML5中新增的一些最为引人注目的特性也需要用到JavaScript。</p>
+</li>
+</ul>
+<h3 id="1-1-2-浏览器战争的结束"><a href="#1-1-2-浏览器战争的结束" class="headerlink" title="1.1.2 浏览器战争的结束"></a>1.1.2 浏览器战争的结束</h3><ul>
+<li><p>激烈的浏览器市场:微软用免费提供IE与网景收费的Navigator抢生意，这一招而后来被认定为反垄断法。</p>
+</li>
+<li><p>不过在坐着这个曾在那段时期为网景做过大约18个顾问的人看来，我从没见过像它那样一根筋地自残的公司。有些公司注定要成为别人的前车之鉴，网景就是其中之一。  </p>
+</li>
+<li><p>浏览器战争以网景倒台及微软受到惩处结束，为基于标准的网络浏览奠定了基础。HTML规范有了改进，遵从这个规范成了准则。</p>
+</li>
+</ul>
+<h3 id="1-1-3-插件称雄"><a href="#1-1-3-插件称雄" class="headerlink" title="1.1.3 插件称雄"></a>1.1.3 插件称雄</h3><ul>
+<li><p>插件是Web世界的“益虫”。它们可以提供一些单用HTML很难实现的高级特性和丰富内容。</p>
+</li>
+<li><p>浏览器开发商看插件不顺眼，因为它把控制权转移到了插件开发商手中。</p>
+</li>
+<li><p>HTML5的一大改进就是着力于让浏览器直接处理那些原本要使用Flash的富内容（rich content）。</p>
+</li>
+</ul>
+<h3 id="1-1-4-语义HTML浮出水面"><a href="#1-1-4-语义HTML浮出水面" class="headerlink" title="1.1.4 语义HTML浮出水面"></a>1.1.4 语义HTML浮出水面</h3><ul>
+<li>自HTML初次亮相以来，对内容进行自动处理日趋重要，人们也越来越致力于分开HTML元素的意义与内容再浏览器中的呈现方式。</li>
+</ul>
+<h3 id="1-1-5-发展态势：HTML标准滞后于其使用"><a href="#1-1-5-发展态势：HTML标准滞后于其使用" class="headerlink" title="1.1.5 发展态势：HTML标准滞后于其使用"></a>1.1.5 发展态势：HTML标准滞后于其使用</h3><ul>
+<li><p>制定标准一般都是一个长期过程，像HTML这种应用官方的技术更是如此。参与方众多，每家都想把新标准往符合自己利益或观点的方向引。</p>
+</li>
+<li><p>负责制定HTML标准的是W3C（World Wide Web Consortium，万维网联盟）。</p>
+</li>
+<li><p>一条提案要花不少时间才能成为标准。而对HTML核心规范的修改则需经过很长时间才能得到批准。</p>
+</li>
+<li><p>HTML规范反应的知识几年前关于Web内容的前沿思考。这削弱了HTML标准的重要性，因为真正的革新并非来自W3C，而是来自浏览器和插件。</p>
+</li>
+</ul>
+<h2 id="1-2-HTML5简介"><a href="#1-2-HTML5简介" class="headerlink" title="1.2 HTML5简介"></a>1.2 HTML5简介</h2><ul>
+<li>HTML5不仅仅是HTML规范的最新版本，它还是一系列用来制作现代富Web内容的相关技术的总称。</li>
+<li>最重要的三项技术是HTML5核心规范、CSS（Cascading Style Sheets，层叠样式表）和JavaScript。<ul>
+<li>HTML核心规范定义用仪表及内容的元素，并明确其含义。</li>
+<li>CSS可用于控制表记过的内容呈现在用户前面的外貌。</li>
+<li>JavaScript则可以用来操纵HTML文档的内容以及响应用户的操作，此外要想使用HTML新增元素的一些为编程目的设计的特性也需要用到JavaScript。</li>
+</ul>
+</li>
+<li>用于网页的各种技术之间的关联已经变得如此紧密，以至于需要通晓这些技术才能制作Web内容。</li>
+</ul>
+<h3 id="1-2-1-新标准"><a href="#1-2-1-新标准" class="headerlink" title="1.2.1 新标准"></a>1.2.1 新标准</h3><p>最大的不足之处大概要算没有一条可用来评估HTML5达标情况的基准线。</p>
+<h3 id="1-2-2-引入原生多媒体支持"><a href="#1-2-2-引入原生多媒体支持" class="headerlink" title="1.2.2 引入原生多媒体支持"></a>1.2.2 引入原生多媒体支持</h3><p>支持在浏览器中直接播放视频和音频文件。</p>
+<h3 id="1-2-3-引入可编程内容"><a href="#1-2-3-引入可编程内容" class="headerlink" title="1.2.3 引入可编程内容"></a>1.2.3 引入可编程内容</h3><p>HTML最大的变化之一是添加了Canvas元素。之所以重要，要使用Canvas就必须用到JavaScript。编程从而成了HTML文档中第一层次的事情。</p>
+<h3 id="1-2-4-引入语义Web"><a href="#1-2-4-引入语义Web" class="headerlink" title="1.2.4 引入语义Web"></a>1.2.4 引入语义Web</h3><p>HTML5引入了一些用来分开元素的含义和内容呈现方式的特性和规则。它标志着HTML在走向成熟的道路上又迈上了一个新台阶，反映出制作和使用HTML内容的方式的多样性。</p>
+<h3 id="1-3-HTML现况"><a href="#1-3-HTML现况" class="headerlink" title="1.3 HTML现况"></a>1.3 HTML现况</h3><h3 id="1-3-1-浏览器对HTML5支持情况"><a href="#1-3-1-浏览器对HTML5支持情况" class="headerlink" title="1.3.1 浏览器对HTML5支持情况"></a>1.3.1 浏览器对HTML5支持情况</h3><ul>
+<li><p>在把某个特性用到实际项目之前，应该先核查一下浏览器是否支持这个特性。</p>
+<ul>
+<li>使用Modernizr（<a href="https://modernizr.com/">https://modernizr.com/</a>）之类的JavaScript库检查特性是可行的。可以用编程的方式判断用户使用的浏览器是否支持关键的HTML特性，借此可以决定在文档中应该使用哪些特性。</li>
+<li>When Can I Use?网站（<a href="http://caniuse.com/">http://caniuse.com</a>）提供了浏览器的支持情况和采用率方面的详细信息，并且勤于修订。</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-3-2-网站对HTML5的支持情况"><a href="#1-3-2-网站对HTML5的支持情况" class="headerlink" title="1.3.2 网站对HTML5的支持情况"></a>1.3.2 网站对HTML5的支持情况</h3><h2 id="1-4-本书结构"><a href="#1-4-本书结构" class="headerlink" title="1.4 本书结构"></a>1.4 本书结构</h2><h2 id="1-5-HTML5更多信息"><a href="#1-5-HTML5更多信息" class="headerlink" title="1.5 HTML5更多信息"></a>1.5 HTML5更多信息</h2><h2 id="1-6-小结"><a href="#1-6-小结" class="headerlink" title="1.6 小结"></a>1.6 小结</h2>]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>读书</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于hexo+github部署博客网站后，网站打开404问题个人总结</title>
     <url>/2021/10/31/%E5%85%B3%E4%BA%8Ehexo-github%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%90%8E%EF%BC%8C%E7%BD%91%E7%AB%99%E6%89%93%E5%BC%80404%E9%97%AE%E9%A2%98%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>很多人都遇到了相同的问题，为什么hexo本地预览没有问题，但是push到github上，打开显示404呢？本文会引用相关解决方案博客和讲述本人遇到的情况和解决方案。</p>
@@ -44,7 +139,7 @@
     <title>关于建成独立博客的一天</title>
     <url>/2021/10/31/hello-world/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>一直想拥有一个属于自己的博客网站，在11月开始前的一天动工。记录一下今天的学习过程</p>
-<h2 id="访问的相关教程："><a href="#访问的相关教程：" class="headerlink" title="访问的相关教程："></a>访问的相关教程：</h2><ul>
+<h2 id="访问的相关教程"><a href="#访问的相关教程" class="headerlink" title="访问的相关教程"></a>访问的相关教程</h2><ul>
 <li><p><a href="http://blog.haoji.me/build-blog-website-by-hexo-github.html?from=xa#ce-shi-shi-fu-cheng-gong">搭建博客的网站</a></p>
 </li>
 <li><p><a href="https://shen-yu.gitee.io/">hexo主题</a></p>
@@ -54,6 +149,8 @@
 <li><p><a href="https://cloud.tencent.com/">域名购买</a></p>
 </li>
 </ul>
+<span id="more"></span>
+
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo new page <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line">hexo deploy <span class="comment">#部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment">#查看Hexo的版本</span></span><br><span class="line"></span><br><span class="line">hexo n == hexo new</span><br><span class="line">hexo g == hexo generate</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo d == hexo deploy</span><br><span class="line"></span><br><span class="line">建议每次生成站点或部署之前都用 hexo clean 命令清理一下缓存，请使用 Ctrl + F5 清除缓存并刷新页面。</span><br><span class="line"></span><br><span class="line">hexo s -g --debug 热更新</span><br><span class="line">hexo s -g <span class="comment">#生成并本地预览</span></span><br><span class="line">hexo d -g <span class="comment">#生成并上传</span></span><br><span class="line"></span><br><span class="line">hexo new <span class="string">&#x27;my-first-blog&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h2 id="文章发表格式"><a href="#文章发表格式" class="headerlink" title="文章发表格式"></a>文章发表格式</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">---</span><br><span class="line">title: postName <span class="comment">#文章页面上的显示名称，一般是中文</span></span><br><span class="line">date: 2013-12-02 15:30:16 <span class="comment">#文章生成时间，一般不改，当然也可以任意修改</span></span><br><span class="line">categories: 默认分类 <span class="comment">#分类</span></span><br><span class="line">tags: [tag1,tag2,tag3] <span class="comment">#文章标签，可空，多标签请用格式，注意:后面有个空格</span></span><br><span class="line">description: 附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">以下是正文</span><br><span class="line"></span><br><span class="line"><span class="comment"># 前言</span></span><br><span class="line"></span><br><span class="line">使用github pages服务搭建博客的好处有：</span><br><span class="line"></span><br><span class="line">1. 全是静态文件，访问速度快；</span><br><span class="line">2. 免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</span><br><span class="line">3. 可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；</span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line">4. 数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；</span><br><span class="line">5. 博客内容可以轻松打包、转移、发布到其它平台；</span><br><span class="line">6. 等等；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
