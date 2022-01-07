@@ -123,7 +123,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
        
   <blockquote>
-<p>本文为读书笔记系列之一——《深入React技术栈》第一章<br>之前在up主蜡笔与小勋那里了解到一些快速阅读的方法：<br>将文章中你觉得有用的文字或段落记录下来，然后写你的读书感受，这样才能更快更好地读好一本书，把一本厚厚的资料读薄。以后看看自己记录的笔记，很快就能回忆起其他的内容（联想记忆）。希望我坚持下来吧，ヾ(◍°∇°◍)ﾉﾞ</p>
+<p>本文为读书笔记系列之一——《深入React技术栈》第一章上<br>之前在up主蜡笔与小勋那里了解到一些快速阅读的方法：<br>将文章中你觉得有用的文字或段落记录下来，然后写你的读书感受，这样才能更快更好地读好一本书，把一本厚厚的资料读薄。以后看看自己记录的笔记，很快就能回忆起其他的内容（联想记忆）。希望我坚持下来吧，ヾ(◍°∇°◍)ﾉﾞ</p>
 </blockquote>
 <span id="more"></span>
 
@@ -184,10 +184,10 @@ var _hmt = _hmt || [];
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> DeleteAccount = <span class="function">() =&gt;</span>(</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Are you sure?<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">DangerButton</span>&gt;</span>Confirm<span class="tag">&lt;/<span class="name">DangerButton</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">Button</span> <span class="attr">color</span>=<span class="string">&quot;blue&quot;</span>&gt;</span>Cancel<span class="tag">&lt;/<span class="name">Button</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
-</ul>
-<ul>
-<li>JSX在产品打包阶段都已经编译成纯JavaScript，不会带来任何副作用。</li>
-<li>使用JSX写法的代码更易于阅读与开发。</li>
+<li><p>JSX在产品打包阶段都已经编译成纯JavaScript，不会带来任何副作用。</p>
+</li>
+<li><p>使用JSX写法的代码更易于阅读与开发。</p>
+</li>
 </ul>
 <h3 id="1-2-2-JSX基本语法"><a href="#1-2-2-JSX基本语法" class="headerlink" title="1.2.2 JSX基本语法"></a>1.2.2 JSX基本语法</h3><ul>
 <li><p>JSX的官方定义是类XML语法的ECMAScript拓展。</p>
@@ -215,7 +215,7 @@ var _hmt = _hmt || [];
 <li><p>而组件元素的属性是完全自定义的属性，也可以理解为实现组件所需要的参数。比如</p>
 <p><code>const Header=(title,children)=&gt;(</code></p>
 <p><code>&lt;h3 title=&#123;title&#125;&gt;&lt;h3&gt;</code></p>
-<p><code>);</code></p>
+<p><code>);</code> </p>
 </li>
 <li><p>我们给Header组件加了一个title属性，那么可以这么调用</p>
 <p><code>&lt;Header title=&quot;hello world&quot;&gt;Hello World&lt;/Header&gt;</code></p>
@@ -240,14 +240,18 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> component = <span class="xml"><span class="tag">&lt;<span class="name">Component</span> /&gt;</span></span>;</span><br><span class="line">component.props.name=name;</span><br><span class="line">component.props.value=value;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>上述这样是反模式，因为React不能帮你检查属性类型。</li>
 <li>这里，可以使用ES6 rest/spread特性来提高效率：</li>
 </ul>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> data=&#123;<span class="attr">name</span>:<span class="string">&#x27;foo&#x27;</span>,<span class="attr">value</span>:<span class="string">&#x27;bar&#x27;</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> component = <span class="xml"><span class="tag">&lt;<span class="name">Component</span> <span class="attr">name</span>=<span class="string">&#123;data.name&#125;</span> <span class="attr">value</span>=<span class="string">&#123;data.value&#125;</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
 <p>可以写成</p>
-<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> data=&#123;<span class="attr">name</span>:<span class="string">&#x27;foo&#x27;</span>,<span class="attr">value</span>:<span class="string">&#x27;bar&#x27;</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> component = <span class="xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...data</span>&#125;&gt;</span></span></span><br></pre></td></tr></table></figure></li>
+</li>
 </ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> data=&#123;<span class="attr">name</span>:<span class="string">&#x27;foo&#x27;</span>,<span class="attr">value</span>:<span class="string">&#x27;bar&#x27;</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> component = <span class="xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...data</span>&#125;&gt;</span></span></span><br></pre></td></tr></table></figure>
+
 <h2 id="更新于2021-11-11-16：43-一章实在太多了"><a href="#更新于2021-11-11-16：43-一章实在太多了" class="headerlink" title="更新于2021/11/11 16：43 一章实在太多了"></a>更新于2021/11/11 16：43 一章实在太多了</h2> 
       <!-- reward -->
       
@@ -331,6 +335,15 @@ var _hmt = _hmt || [];
    
   <nav class="article-nav">
     
+      <a href="/2021/12/12/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E3%80%8A%E6%B7%B1%E5%85%A5React%E6%8A%80%E6%9C%AF%E6%A0%88%E3%80%8B%EF%BC%88%E4%BA%8C%EF%BC%89/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            读书笔记--《深入React技术栈》（二）
+          
+        </div>
+      </a>
+    
     
       <a href="/2021/11/07/%E3%80%8AHTTP5%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%8B-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
@@ -398,7 +411,7 @@ var _hmt = _hmt || [];
     <ul>
       <li>
         Copyrights &copy;
-        2015-2021
+        2015-2022
         <i class="ri-heart-fill heart_icon"></i> Tangent1231
       </li>
     </ul>
