@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>读书笔记--《学习JavaScript数据结构》（一）</title>
+    <url>/2022/03/11/%E5%AD%A6%E4%B9%A0JavaScript%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>本文为读书笔记系列之一——《学习JavaScript数据结构》<br>之前在up主蜡笔与小勋那里了解到一些快速阅读的方法：<br>将文章中你觉得有用的文字或段落记录下来，然后写你的读书感受，这样才能更快更好地读好一本书，把一本厚厚的资料读薄。以后看看自己记录的笔记，很快就能回忆起其他的内容（联想记忆）。希望我坚持下来吧，ヾ(◍°∇°◍)ﾉﾞ</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="数组笔记"><a href="#数组笔记" class="headerlink" title="数组笔记"></a>数组笔记</h1><ol>
+<li><p>数组插入到最后可以用push</p>
+ <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">numbers.push(-<span class="number">2</span>);</span><br><span class="line">numbers.push(-<span class="number">4</span>,-<span class="number">3</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>数组插入到第一个可以用unshift：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">numbers.unshift(-<span class="number">2</span>);</span><br><span class="line">numbers.unshift(-<span class="number">4</span>,-<span class="number">3</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>删除数组最末尾元素：pop</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">numbers.pop();</span><br></pre></td></tr></table></figure></li>
+<li><p>删除第一个元素</p>
+ <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">numbers.shift();</span><br></pre></td></tr></table></figure></li>
+<li><p>在任意位置添加或删除元素：splice</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">numbers.splice(<span class="number">5</span>,<span class="number">3</span>);</span><br><span class="line"><span class="comment">//删除从数组索引5开始的3个元素，下标5-7都已删除</span></span><br><span class="line"></span><br><span class="line">numbers.splice(<span class="number">5</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line"><span class="comment">//从数组索引5开始插入值2，3，4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//splice方法接受的第一个参数，表示想要删除或插入的元素的索引值，第一个参数是删除的个数（不删除传入0），第三个参数往后就是需要加入数组的值（可以声明展开的方法传入数组）</span></span><br><span class="line"></span><br><span class="line">numbers.splice(<span class="number">5</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>);</span><br><span class="line"><span class="comment">//从索引5开始删除了3个元素，也从5开始添加了元素2、3、4</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>常用数组的方法：</p>
+<ul>
+<li>concat：连接2个或更多的数组，并返回结果</li>
+<li>every：遍历数组，如果该函数对每个元素都返回true，则返回true</li>
+<li>filter：遍历数组，返回该函数会返回true元素组成的数组</li>
+<li>forEach：遍历数组</li>
+<li>join：所有数组元素连接成一个字符串</li>
+<li>indexOf：返回第一个与给定参数相等的数组元素的索引，没有找到则返回-1</li>
+<li>lastIndexOf：返回在数组中搜索到的与给定参数相等的元素的索引里最大的值</li>
+<li>map：遍历，返回每次函数调用的结果组成的数组</li>
+<li>reverse：倒置</li>
+<li>slice：传入索引值，将数组里对应索引范围内的元素作为新数组返回</li>
+<li>some：遍历，若任意元素返回true，则返回true</li>
+<li>sort：排序</li>
+<li>toString：数组作为字符串返回</li>
+<li>valueOf:和toString类似</li>
+</ul>
+</li>
+<li><p>迭代器函数<br><strong>map、filter和reduce是JavaScript函数式编程的基础。</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> isEven = <span class="function"><span class="params">x</span> =&gt;</span> x % <span class="number">2</span> === <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//1. every方法</span></span><br><span class="line"></span><br><span class="line">numbers.every(isEven);  <span class="comment">//false</span></span><br><span class="line"><span class="comment">//因为第一个元素是1，直接就返回false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2. some方法</span></span><br><span class="line">numbers.some(isEven);<span class="comment">//true</span></span><br><span class="line"><span class="comment">//迭代数组，直到函数返回true。先迭代1，然后返回false，第二个是2，是偶数，返回true，迭代结束。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3. forEach方法</span></span><br><span class="line"> numbers.forEach(<span class="function"><span class="params">x</span>=&gt;</span><span class="built_in">console</span>.log(x%<span class="number">2</span>===<span class="number">0</span>)); <span class="comment">//返回和for循环结果相同</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">//4. map和filter方法</span></span><br><span class="line"> <span class="keyword">const</span> myMap = numbers.map(isEven);</span><br><span class="line"> <span class="comment">//mpMap=[false,true,false,true,false,true]；</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">const</span> evenNumbers=numbers.filter(isEven);</span><br><span class="line"> <span class="comment">//evenNumbers=[2,4,6]</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">//5.reducer方法</span></span><br><span class="line"></span><br><span class="line"> numbers.reduce(<span class="function">(<span class="params">previous,current</span>)=&gt;</span>previous+current);<span class="comment">//累加器，输出21</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">//reduce方法接收一个有如下四个参数的函数：previousValue、currentValue、index和array。后两个可选，这个函数会返回一个将被叠加到累加器的值，reduce方法停止执行后会返回这个累加器。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>读书</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2021年秋季L4班题解</title>
     <url>/2022/01/07/2021%E5%B9%B4%E7%A7%8B%E5%AD%A3L4%E7%8F%AD%E9%A2%98%E8%A7%A3/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
@@ -54,8 +104,6 @@
 
 
 
-
-<p>若有其他疑问，请在课程群内提问，若以后想和老师探讨一些问题，可以加入QQ群：875543997，仅做学习交流群使用。</p>
 ]]></content>
       <categories>
         <category>学习</category>
@@ -121,8 +169,6 @@
 <h3 id="G-字符串输入输出：字符串输入输出"><a href="#G-字符串输入输出：字符串输入输出" class="headerlink" title="G. 字符串输入输出：字符串输入输出"></a>G. 字符串输入输出：字符串输入输出</h3><h4 id="题解-5"><a href="#题解-5" class="headerlink" title="题解"></a>题解</h4><p>题意：如题所示。</p>
 <p>做法：输入一个字符串，然后输出两遍字符串，中间加一个空格。</p>
 <h4 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string s;</span><br><span class="line">	cin &gt;&gt; s;</span><br><span class="line">	cout &lt;&lt; s &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; s;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>若有其他疑问，请在课程群内提问，若以后想和老师探讨一些问题，可以加入QQ群：875543997，仅做学习交流群使用。</p>
 ]]></content>
       <categories>
         <category>学习</category>
