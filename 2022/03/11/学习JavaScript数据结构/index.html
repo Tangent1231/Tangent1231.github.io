@@ -98,7 +98,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">804</span>
+            <span class="post-count">1.5k</span>
         </span>
     </span>
 
@@ -107,7 +107,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">3 分钟</span>
+            <span class="post-count">6 分钟</span>
         </span>
     </span>
 </div>
@@ -158,6 +158,50 @@ var _hmt = _hmt || [];
 </li>
 <li><p>迭代器函数<br><strong>map、filter和reduce是JavaScript函数式编程的基础。</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> isEven = <span class="function"><span class="params">x</span> =&gt;</span> x % <span class="number">2</span> === <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//1. every方法</span></span><br><span class="line"></span><br><span class="line">numbers.every(isEven);  <span class="comment">//false</span></span><br><span class="line"><span class="comment">//因为第一个元素是1，直接就返回false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2. some方法</span></span><br><span class="line">numbers.some(isEven);<span class="comment">//true</span></span><br><span class="line"><span class="comment">//迭代数组，直到函数返回true。先迭代1，然后返回false，第二个是2，是偶数，返回true，迭代结束。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3. forEach方法</span></span><br><span class="line"> numbers.forEach(<span class="function"><span class="params">x</span>=&gt;</span><span class="built_in">console</span>.log(x%<span class="number">2</span>===<span class="number">0</span>)); <span class="comment">//返回和for循环结果相同</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">//4. map和filter方法</span></span><br><span class="line"> <span class="keyword">const</span> myMap = numbers.map(isEven);</span><br><span class="line"> <span class="comment">//mpMap=[false,true,false,true,false,true]；</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">const</span> evenNumbers=numbers.filter(isEven);</span><br><span class="line"> <span class="comment">//evenNumbers=[2,4,6]</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">//5.reducer方法</span></span><br><span class="line"></span><br><span class="line"> numbers.reduce(<span class="function">(<span class="params">previous,current</span>)=&gt;</span>previous+current);<span class="comment">//累加器，输出21</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">//reduce方法接收一个有如下四个参数的函数：previousValue、currentValue、index和array。后两个可选，这个函数会返回一个将被叠加到累加器的值，reduce方法停止执行后会返回这个累加器。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>ES6 和数组的新功能<br>ES2015和ES2016新增的数组方法：</p>
+<ul>
+<li>@@iterator：返回一个包含数组键值对的迭代器对象，可以通过同步调用得到数组元素的键值对；</li>
+<li>copyWithin：复制数组中一系列元素到同一数组指定的起始位置</li>
+<li>entries：返回包含数组所有键值对的@@iterator</li>
+<li>includes：如果数组中存在某个元素则返回true，否则返回false</li>
+<li>find：根据回调函数给定的条件从数组中查找元素，如果找到则返回该元素</li>
+<li>findIndex:同上，找到返回索引</li>
+<li>fill：用静态值填充数组</li>
+<li>from：根据已有数组创建一个新数组</li>
+<li>keys：返回包函数组所有索引的@@iterator</li>
+<li>of：根据传入的参数创建一个新数组</li>
+<li>values：返回包含数组中所有值的@@iterator</li>
+</ul>
+</li>
+<li><p>使用for…of循环迭代</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> n <span class="keyword">of</span> numbers) &#123;</span><br><span class="line">   <span class="built_in">console</span>.log(n%<span class="number">2</span> ===<span class="number">0</span> ? <span class="string">&#x27;even&#x27;</span> : <span class="string">&#x27;odd&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>使用@@iterator对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> iterator = numbers[<span class="built_in">Symbol</span>.iterator]();</span><br><span class="line"><span class="built_in">console</span>.log(iterator.next().value);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> n <span class="keyword">of</span> iterator) &#123;</span><br><span class="line">   <span class="built_in">console</span>.log(n);</span><br><span class="line">&#125;</span><br><span class="line">数组中所有值都迭代完之后，iterator.next().value会返回<span class="literal">undefined</span>。</span><br></pre></td></tr></table></figure></li>
+<li><p>数组中的entries、keys和values方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> aEntries = numbers.entries();<span class="comment">//得到键值对的迭代器</span></span><br><span class="line"><span class="built_in">console</span>.log(aEntries.next().value);<span class="comment">//[0,1] - 位置0的值为1</span></span><br><span class="line"><span class="built_in">console</span>.log(aEntries.next().value);<span class="comment">//[1,2] - 位置1的值为2</span></span><br><span class="line"><span class="built_in">console</span>.log(aEntries.next().value);<span class="comment">//[2,3] - 位置2的值为3</span></span><br><span class="line"></span><br><span class="line">numbers数组中都是数，key是数组中的位置，value是保存在数组索引的值</span><br><span class="line"></span><br><span class="line">aEntries=numbers.entries();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> n <span class="keyword">of</span> aEntries) &#123;</span><br><span class="line">   <span class="built_in">console</span>.log(n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用集合、字典、散列表等数据结构中，能取出键值对很有用的</p>
+</li>
+</ol>
+<p>   keys方法返回包含数组索引的@@iterator<br>    <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> aKeys = numbers.keys();<span class="comment">//得到数组索引的迭代器</span></span><br><span class="line"><span class="built_in">console</span>.log(aKeys.next());<span class="comment">//&#123;value: 0, done: false &#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(aKeys.next());<span class="comment">//&#123;value: 1, done: false &#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(aKeys.next());<span class="comment">//&#123;value: 2, done: false &#125;</span></span><br></pre></td></tr></table></figure></p>
+<pre><code>keys方法会返回numbers数组的索引。一旦没有可迭代的值，aKeys.next()就会返回一个value属性为undefined、done属性为true的对象。如果done属性的值为false，就意味着还有可迭代的值。
+
+values方法返回的@@iterator则包含数组的值。使用这个方法的代码示例如下。
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> aValues = numbers.values();</span><br><span class="line"><span class="built_in">console</span>.log(aValues.next());<span class="comment">//&#123;values: 1, done: false&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(aValues.next());<span class="comment">//&#123;values: 2, done: false&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(aValues.next());<span class="comment">//&#123;values: 3, done: false&#125;</span></span><br></pre></td></tr></table></figure>
+</code></pre>
+<ol start="12">
+<li><p>使用from方法<br>复制number数组：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> numbers2=<span class="built_in">Array</span>.form(numbers);</span><br></pre></td></tr></table></figure>
+<p>还可以穿入一个用来过滤值的函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> evens=<span class="built_in">Array</span>.form(numbers, <span class="function"><span class="params">x</span> =&gt;</span> (x%<span class="number">2</span>==<span class="number">0</span>));</span><br></pre></td></tr></table></figure>
+<p>会创建一个evens数组，以及值true（偶数）或false（奇数）。</p>
+</li>
+<li><p>使用Array.of方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> numbers3 = <span class="built_in">Array</span>.of(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">let</span> numbers4 = <span class="built_in">Array</span>.of(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> numbers3=[<span class="number">1</span>];</span><br><span class="line"><span class="keyword">let</span> numbersCopy = <span class="built_in">Array</span>.of(...numbers4);</span><br></pre></td></tr></table></figure></li>
+<li><p>使用fill方法用静态值填充数组</p>
+</li>
+<li></li>
 </ol>
  
       <!-- reward -->
@@ -241,6 +285,15 @@ var _hmt = _hmt || [];
 
    
   <nav class="article-nav">
+    
+      <a href="/2022/03/18/%E5%9B%BE%E8%A7%A3HTTP/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            读书笔记--《图解HTTP》（一）
+          
+        </div>
+      </a>
     
     
       <a href="/2022/01/07/2021%E5%B9%B4%E7%A7%8B%E5%AD%A3L4%E7%8F%AD%E9%A2%98%E8%A7%A3/" class="article-nav-link">
